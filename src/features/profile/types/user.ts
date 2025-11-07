@@ -18,8 +18,7 @@ export type User = {
   phoneNumber: string;
   /** base64 encoded (https://t.io.vn/base64-string-converter) */
   email: string;
-  /** Personal/homepage URL */
-  website: string;
+
   /** Primary/current role shown on profile */
   jobTitle: string;
   /** Work history entries */
@@ -34,10 +33,6 @@ export type User = {
   avatar: string;
   /** Open Graph image URL for social sharing */
   ogImage: string;
-  /** Audio URL for name pronunciation */
-  namePronunciationUrl: string;
-  /** SEO keywords list for metadata */
-  keywords: string[];
   /** Profile/site start date in YYYY-MM-DD */
   dateCreated: string;
 };

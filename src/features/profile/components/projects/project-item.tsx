@@ -13,8 +13,6 @@ import {
 import { Tag } from "@/components/ui/tag";
 import { SimpleTooltip } from "@/components/ui/tooltip";
 import { Prose } from "@/components/ui/typography";
-import { UTM_PARAMS } from "@/config/site";
-import { addQueryParams } from "@/utils/url";
 
 import type { Project } from "../../types/projects";
 
@@ -82,7 +80,7 @@ export function ProjectItem({
               <SimpleTooltip content="Open Project Link">
                 <a
                   className="relative flex size-6 shrink-0 items-center justify-center text-muted-foreground after:absolute after:-inset-2 hover:text-foreground"
-                  href={addQueryParams(project.link, UTM_PARAMS)}
+                  href={project.link}
                   target="_blank"
                   rel="noopener"
                 >

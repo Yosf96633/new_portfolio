@@ -9,7 +9,7 @@
  */
 export type TechStack = {
   /** Unique identifier used to resolve icon files. */
-  key: string;
+  key?: string;
   /** Display name of the technology. */
   title: string;
   /** Official website URL. */

@@ -1,14 +1,14 @@
 export function ChanhDaiMark(props: React.ComponentProps<"svg">) {
   return (
     <svg
+      className="h-28 w-full text-border"
       xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 512 256"
+      viewBox="0 0 615 259"
       {...props}
     >
       <path
-        fill="currentColor"
-        d="M192 256H64v-64h128v64ZM448 64H320v128h128v64H256V0h192v64ZM64 192H0V64h64v128ZM512 192h-64V64h64v128ZM192 64H64V0h128v64Z"
+        fill="currentcolor"
+        d="M0 0h64v256h-64zM64 64h64v64h-64zM128 128h64v64h-64zM192 64h64v64h-64zM256 0h64v256h-64zM345 0h64v64h-64zM385 64h64v64h-64zM448 128h64v128h-64zM512 64h64v64h-64zM554 0h64v64h-64z"
       />
     </svg>
   );

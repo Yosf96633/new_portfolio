@@ -6,7 +6,6 @@ export const SITE_INFO = {
   url: process.env.APP_URL || "https://chanhdai.com",
   ogImage: USER.ogImage,
   description: USER.bio,
-  keywords: USER.keywords,
 };
 
 export const META_THEME_COLORS = {
@@ -14,27 +13,5 @@ export const META_THEME_COLORS = {
   dark: "#09090b",
 };
 
-export const MAIN_NAV: NavItem[] = [
-  {
-    title: "Daifolio",
-    href: "/",
-  },
-  {
-    title: "Blog",
-    href: "/blog",
-  },
-  {
-    title: "Components",
-    href: "/components",
-  },
-];
-
-export const GITHUB_USERNAME = "ncdai";
-export const SOURCE_CODE_GITHUB_REPO = "ncdai/chanhdai.com";
-export const SOURCE_CODE_GITHUB_URL = "https://github.com/ncdai/chanhdai.com";
-
-export const UTM_PARAMS = {
-  utm_source: "chanhdai.com",
-  utm_medium: "portfolio_website",
-  utm_campaign: "referral",
-};
+export const GITHUB_USERNAME = "Yosf96633";
+export const SOURCE_CODE_GITHUB_URL = "https://github.com/Yosf96633";

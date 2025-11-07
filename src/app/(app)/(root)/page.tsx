@@ -1,11 +1,7 @@
 import dayjs from "dayjs";
 import type { ProfilePage as PageSchema, WithContext } from "schema-dts";
-
 import { About } from "@/features/profile/components/about";
-import { Awards } from "@/features/profile/components/awards";
-import { Blog } from "@/features/profile/components/blog";
 import { Brand } from "@/features/profile/components/brand";
-import { Certifications } from "@/features/profile/components/certifications";
 import { Experiences } from "@/features/profile/components/experiences";
 import { GitHubContributions } from "@/features/profile/components/github-contributions";
 import { Overview } from "@/features/profile/components/overview";
@@ -13,11 +9,9 @@ import { ProfileCover } from "@/features/profile/components/profile-cover";
 import { ProfileHeader } from "@/features/profile/components/profile-header";
 import { Projects } from "@/features/profile/components/projects";
 import { SocialLinks } from "@/features/profile/components/social-links";
-import { TeckStack } from "@/features/profile/components/teck-stack";
-import { TestimonialsMarquee } from "@/features/profile/components/testimonials-marquee";
+import { TechStack } from "@/features/profile/components/tech-stack";
 import { USER } from "@/features/profile/data/user";
 import { cn } from "@/lib/utils";
-
 export default function Page() {
   return (
     <>
@@ -27,15 +21,12 @@ export default function Page() {
           __html: JSON.stringify(getPageJsonLd()).replace(/</g, "\\u003c"),
         }}
       />
-
       <div className="mx-auto md:max-w-3xl">
         <ProfileCover />
         <ProfileHeader />
         <Separator />
-
         <Overview />
         <Separator />
-
         <SocialLinks />
         <Separator />
 
@@ -45,25 +36,13 @@ export default function Page() {
         <GitHubContributions />
         <Separator />
 
-        <TestimonialsMarquee />
-        <Separator />
-
-        <TeckStack />
-        <Separator />
-
-        <Blog />
+        <TechStack />
         <Separator />
 
         <Experiences />
         <Separator />
 
         <Projects />
-        <Separator />
-
-        <Awards />
-        <Separator />
-
-        <Certifications />
         <Separator />
 
         <Brand />

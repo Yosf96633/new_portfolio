@@ -1,7 +1,6 @@
 import { GlobeIcon, MapPinIcon, MarsIcon, VenusIcon } from "lucide-react";
 
 import { USER } from "@/features/profile/data/user";
-import { urlToName } from "@/utils/url";
 
 import { Panel, PanelContent } from "../panel";
 import { EmailItem } from "./email-item";
@@ -31,12 +30,6 @@ export function Overview() {
         <PhoneItem phoneNumber={USER.phoneNumber} />
 
         <EmailItem email={USER.email} />
-
-        <IntroItem
-          icon={GlobeIcon}
-          content={urlToName(USER.website)}
-          href={USER.website}
-        />
 
         <IntroItem
           icon={USER.gender === "male" ? MarsIcon : VenusIcon}

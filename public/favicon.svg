@@ -1,0 +1,12 @@
+ <svg
+      className="h-28 w-full text-border"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 615 259"
+      fill="white"
+  
+    >
+      <path
+      
+        d="M0 0h64v256h-64zM64 64h64v64h-64zM128 128h64v64h-64zM192 64h64v64h-64zM256 0h64v256h-64zM345 0h64v64h-64zM385 64h64v64h-64zM448 128h64v128h-64zM512 64h64v64h-64zM554 0h64v64h-64z"
+      />
+    </svg>

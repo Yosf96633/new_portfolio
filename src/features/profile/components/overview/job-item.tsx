@@ -4,7 +4,6 @@ import {
   LightbulbIcon,
 } from "lucide-react";
 
-import { UTM_PARAMS } from "@/config/site";
 import { addQueryParams } from "@/utils/url";
 
 import { IntroItem } from "./intro-item";
@@ -38,7 +37,7 @@ export function JobItem({
           {title} @
           <a
             className="ml-0.5 font-medium underline-offset-4 hover:underline"
-            href={addQueryParams(website, UTM_PARAMS)}
+            href={website}
             target="_blank"
             rel="noopener"
           >
