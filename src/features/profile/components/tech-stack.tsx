@@ -77,16 +77,16 @@ export function TechStack() {
                         <Image
                           src={getImagePath("light")}
                           alt={`${tech.title} light icon`}
-                          width={58}
-                          height={58}
+                          width={62}
+                          height={62}
                           className="hidden [html.light_&]:block"
                           unoptimized
                         />
                         <Image
                           src={getImagePath("dark")}
                           alt={`${tech.title} dark icon`}
-                          width={58}
-                          height={58}
+                          width={62}
+                          height={62}
                           className="hidden [html.dark_&]:block"
                           unoptimized
                         />
@@ -95,8 +95,8 @@ export function TechStack() {
                       <Image
                         src={getImagePath()}
                         alt={`${tech.title} icon`}
-                        width={58}
-                        height={58}
+                        width={62}
+                        height={62}
                         unoptimized
                       />
                     )}

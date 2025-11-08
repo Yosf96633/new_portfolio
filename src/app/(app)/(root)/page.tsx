@@ -1,5 +1,3 @@
-import dayjs from "dayjs";
-import type { ProfilePage as PageSchema, WithContext } from "schema-dts";
 import { About } from "@/features/profile/components/about";
 import { Brand } from "@/features/profile/components/brand";
 import { Experiences } from "@/features/profile/components/experiences";
@@ -10,61 +8,37 @@ import { ProfileHeader } from "@/features/profile/components/profile-header";
 import { Projects } from "@/features/profile/components/projects";
 import { SocialLinks } from "@/features/profile/components/social-links";
 import { TechStack } from "@/features/profile/components/tech-stack";
-import { USER } from "@/features/profile/data/user";
 import { cn } from "@/lib/utils";
 export default function Page() {
   return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(getPageJsonLd()).replace(/</g, "\\u003c"),
-        }}
-      />
-      <div className="mx-auto md:max-w-3xl">
-        <ProfileCover />
-        <ProfileHeader />
-        <Separator />
-        <Overview />
-        <Separator />
-        <SocialLinks />
-        <Separator />
+    <div className="mx-auto md:max-w-3xl">
+      <ProfileCover />
+      <ProfileHeader />
+      <Separator />
+      <Overview />
+      <Separator />
+      <SocialLinks />
+      <Separator />
 
-        <About />
-        <Separator />
+      <About />
+      <Separator />
 
-        <GitHubContributions />
-        <Separator />
+      <GitHubContributions />
+      <Separator />
 
-        <TechStack />
-        <Separator />
+      <TechStack />
+      <Separator />
 
-        <Experiences />
-        <Separator />
+      <Experiences />
+      <Separator />
 
-        <Projects />
-        <Separator />
+      <Projects />
+      <Separator />
 
-        <Brand />
-        <Separator />
-      </div>
-    </>
+      <Brand />
+      <Separator />
+    </div>
   );
-}
-
-function getPageJsonLd(): WithContext<PageSchema> {
-  return {
-    "@context": "https://schema.org",
-    "@type": "ProfilePage",
-    dateCreated: dayjs(USER.dateCreated).toISOString(),
-    dateModified: dayjs().toISOString(),
-    mainEntity: {
-      "@type": "Person",
-      name: USER.displayName,
-      identifier: USER.username,
-      image: USER.avatar,
-    },
-  };
 }
 
 function Separator({ className }: { className?: string }) {
