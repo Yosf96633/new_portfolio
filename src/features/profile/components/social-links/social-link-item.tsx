@@ -1,10 +1,16 @@
-import { ArrowUpRightIcon } from "lucide-react";
+import { ArrowUpRightIcon, DownloadIcon } from "lucide-react";
 import Image from "next/image";
 
 import type { SocialLink } from "@/features/profile/types/social-links";
 import { cn } from "@/lib/utils";
 
-export function SocialLinkItem({ icon, title, description, href }: SocialLink) {
+export function SocialLinkItem({
+  icon,
+  title,
+  description,
+  href,
+  download,
+}: SocialLink) {
   return (
     <a
       className={cn(
@@ -13,8 +19,9 @@ export function SocialLinkItem({ icon, title, description, href }: SocialLink) {
         "sm:nth-[2n+1]:screen-line-before sm:nth-[2n+1]:screen-line-after"
       )}
       href={href}
-      target="_blank"
-      rel="noopener"
+      target={download ? undefined : "_blank"}
+      rel={download ? undefined : "noopener"}
+      download={download}
     >
       <div className="relative size-12 shrink-0">
         <Image
@@ -39,7 +46,11 @@ export function SocialLinkItem({ icon, title, description, href }: SocialLink) {
         )}
       </div>
 
-      <ArrowUpRightIcon className="size-4 text-muted-foreground" />
+      {download ? (
+        <DownloadIcon className="size-4 text-muted-foreground" />
+      ) : (
+        <ArrowUpRightIcon className="size-4 text-muted-foreground" />
+      )}
     </a>
   );
 }

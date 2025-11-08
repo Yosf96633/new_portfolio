@@ -1,38 +1,45 @@
-"use client";
+"use client"
 
-import { useTheme } from "next-themes";
-import type { ToasterProps } from "sonner";
-import { Toaster as Sonner } from "sonner";
+import {
+  CircleCheck,
+  Info,
+  LoaderCircle,
+  OctagonX,
+  TriangleAlert,
+} from "lucide-react"
+import { useTheme } from "next-themes"
+import { Toaster as Sonner } from "sonner"
 
-import { cn } from "@/lib/utils";
+type ToasterProps = React.ComponentProps<typeof Sonner>
 
 const Toaster = ({ ...props }: ToasterProps) => {
-  const { theme = "system" } = useTheme();
+  const { theme = "system" } = useTheme()
 
   return (
     <Sonner
       theme={theme as ToasterProps["theme"]}
       className="toaster group"
+      icons={{
+        success: <CircleCheck className="h-4 w-4" />,
+        info: <Info className="h-4 w-4" />,
+        warning: <TriangleAlert className="h-4 w-4" />,
+        error: <OctagonX className="h-4 w-4" />,
+        loading: <LoaderCircle className="h-4 w-4 animate-spin" />,
+      }}
       toastOptions={{
         classNames: {
-          toast: cn(
-            "group-[.toaster]:border-none! group-[.toaster]:shadow-md!",
-            "group-[.toaster]:backdrop-blur-md supports-backdrop-filter:group-[.toaster]:bg-popover/90!",
-            "group-[.toaster]:ring-1! group-[.toaster]:ring-black/10! dark:group-[.toaster]:ring-white/15!"
-          ),
+          toast:
+            "group toast group-[.toaster]:bg-background group-[.toaster]:text-foreground group-[.toaster]:border-border group-[.toaster]:shadow-lg",
+          description: "group-[.toast]:text-muted-foreground",
+          actionButton:
+            "group-[.toast]:bg-primary group-[.toast]:text-primary-foreground",
+          cancelButton:
+            "group-[.toast]:bg-muted group-[.toast]:text-muted-foreground",
         },
       }}
-      style={
-        {
-          "--normal-bg": "var(--cd-popover)",
-          "--normal-text": "var(--cd-popover-foreground)",
-          "--normal-border": "var(--cd-border)",
-          "--border-radius": "var(--radius-xl)",
-        } as React.CSSProperties
-      }
       {...props}
     />
-  );
-};
+  )
+}
 
-export { Toaster };
+export { Toaster }

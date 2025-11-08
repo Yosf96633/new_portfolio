@@ -1,6 +1,7 @@
 import { About } from "@/features/profile/components/about";
 import { Brand } from "@/features/profile/components/brand";
 import { Experiences } from "@/features/profile/components/experiences";
+import { Contact } from "@/features/profile/components/form";
 import { GitHubContributions } from "@/features/profile/components/github-contributions";
 import { Overview } from "@/features/profile/components/overview";
 import { ProfileCover } from "@/features/profile/components/profile-cover";
@@ -34,7 +35,8 @@ export default function Page() {
 
       <Projects />
       <Separator />
-
+      <Contact />
+      <Separator />
       <Brand />
       <Separator />
     </div>

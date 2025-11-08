@@ -5,6 +5,11 @@ export function SiteFooter() {
         <p className="mb-1 px-4 text-center font-mono text-sm text-balance text-muted-foreground">
           Inspired by tailwindcss.com & ui.shadcn.com
         </p>
+        <p className="mb-1 px-4 text-center font-mono text-sm text-balance text-muted-foreground">
+          Developed by Yousaf with{" "}
+          <span className="hidden dark:block">🤍 & ☕</span>
+          <span className="block dark:hidden">🖤 & ☕</span>
+        </p>
       </div>
       <div className="pb-[env(safe-area-inset-bottom,0px)]">
         <div className="flex h-2" />

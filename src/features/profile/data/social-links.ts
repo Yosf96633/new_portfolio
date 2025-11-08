@@ -1,5 +1,5 @@
 import type { SocialLink } from "../types/social-links";
-
+import { FileText } from "lucide-react";
 export const SOCIAL_LINKS: SocialLink[] = [
   {
     icon: "https://assets.chanhdai.com/images/link-icons/linkedin.webp?t=1759581475",
@@ -12,5 +12,12 @@ export const SOCIAL_LINKS: SocialLink[] = [
     title: "GitHub",
     description: "Yosf96633",
     href: "https://github.com/Yosf96633",
+  },
+  {
+    icon: "/cv/image.png",
+    title: "Download CV",
+    description: "Resume & Portfolio",
+    href: "/cv/yousaf.pdf", // Update with your actual CV path
+    download: true, // Add this flag
   },
 ];

@@ -1,9 +1,9 @@
+import { LucideIcon } from "lucide-react";
+
 export type SocialLink = {
-  /** Icon image URL (absolute or path under /public) shown beside the title. */
-  icon: string;
+  icon: string | LucideIcon;
   title: string;
-  /** Optional handle/username or subtitle displayed under the title. */
-  description?: string;
-  /** External profile URL opened when the item is clicked. */
+  description: string;
   href: string;
+  download?: boolean; // Add this optional field
 };
