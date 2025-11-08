@@ -1,7 +1,5 @@
-import { LucideIcon } from "lucide-react";
-
 export type SocialLink = {
-  icon: string | LucideIcon;
+  icon: string;
   title: string;
   description: string;
   href: string;
