@@ -53,7 +53,7 @@ export function ProfileHeader() {
             "bg-[repeating-linear-gradient(315deg,var(--pattern-foreground)_0,var(--pattern-foreground)_1px,transparent_0,transparent_50%)] bg-size-[10px_10px] [--pattern-foreground:var(--color-edge)]/56"
           )}
         >
-          <div className="dark:text-zinc-550 line-clamp-1 font-mono text-xs text-zinc-500 select-none max-sm:hidden">
+          <div className="dark:text-zinc-550 line-clamp-1 font-mono text-xs text-zinc-500 select-none">
             {"text-3xl "}
             <span className="inline dark:hidden">text-zinc-950</span>
             <span className="hidden dark:inline">text-zinc-50</span>
