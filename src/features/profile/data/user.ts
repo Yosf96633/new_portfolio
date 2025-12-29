@@ -10,31 +10,24 @@ export const USER: User = {
   bio: "Building the future, one microservice at a time.",
   flipSentences: [
     "Building the future, one microservice at a time.",
-    "Full Stack Web Developer",
+    "Full Stack Developer",
     "GenAI & LLM Integration",
     "Microservices & System Design",
   ],
-  address: "Narowal, Punjab, Pakistan",
+  address: "Lahore, Punjab, Pakistan",
   phoneNumber: "KzkyIDMzNSA4NDg1NzMy", // E.164 format, base64 encoded (https://t.io.vn/base64-string-converter)
   email: "eW91c2FmLmRldjE4QGdtYWlsLmNvbQ==", // base64 encoded
-  jobTitle: "Full Stack Web Developer",
-  jobs: [
-    {
-      title: "Full Stack Web Developer",
-      company: "Code Expert",
-      website: "https://www.codeexpertx.com/",
-    },
-  ],
+  jobTitle: "Full Stack Developer",
   about: `
-Hello, World! I am Muhammad Yousaf — a Full Stack Web Developer passionate about building intelligent, scalable applications that push the boundaries of modern web development.
+Hey, I'm Muhammad Yousaf — a Full Stack Developer who loves turning complex problems into clean, scalable solutions.
 
-Currently working at Code Expert, I specialize in creating robust web applications using the MERN stack, Next.js, TypeScript, and modern design systems like shadcn/ui and Tailwind CSS. I focus on delivering clean, maintainable code and exceptional user experiences.
+I work primarily with the MERN stack and Next.js, building production-ready applications that balance performance with great user experience. Whether it's architecting REST APIs, optimizing database queries, or translating designs into pixel-perfect interfaces, I enjoy the entire process of bringing ideas to life.
 
-I'm actively expanding my expertise into the AI domain, currently learning Agentic AI, LangChain, and LangGraph to build the next generation of intelligent applications. With a growing knowledge of system design principles, I'm working towards my goal of becoming a proficient Full Stack AI Developer.
+Right now, I'm diving deep into AI development — exploring Agentic AI, LangChain, and LangGraph. I'm fascinated by the challenge of building systems that don't just execute commands but actually think and adapt. Combining my full-stack foundation with AI is where I see the real potential to create something impactful.
 
-My passion lies in creating autonomous systems that combine the power of AI with solid full-stack engineering — building applications that don't just respond to user input, but actively solve problems and adapt intelligently.
+Beyond the code, I'm always learning. System design, new frameworks, better patterns — I believe there's always a smarter way to solve a problem, and I'm constantly looking for it.
 
-Let's connect and build the future of intelligent software together!
+If you're working on something interesting or just want to talk tech, feel free to reach out. I'm always up for good conversations and new opportunities.
 `,
   avatar: "/image.png",
   ogImage:

@@ -22,7 +22,7 @@ export type User = {
   /** Primary/current role shown on profile */
   jobTitle: string;
   /** Work history entries */
-  jobs: {
+  jobs?: {
     title: string;
     company: string;
     website: string;

@@ -5,9 +5,9 @@ export const PROJECTS: Project[] = [
     id: "movies-app",
     title: "Movie Information Web App",
     period: {
-      start: "2024",
+      start: "2025",
     },
-    link: "https://movies-app-two-rouge.vercel.app/",
+    link: "https://movies-app-ros.vercel.app/",
     skills: [
       "Next.js",
       "TypeScript",
@@ -40,7 +40,7 @@ export const PROJECTS: Project[] = [
     period: {
       start: "2024",
     },
-    link: "https://cambot-rose.vercel.app/",
+    link: "https://cambot-fyp.vercel.app/",
     skills: [
       "Final Year Project",
       "Next.js",
