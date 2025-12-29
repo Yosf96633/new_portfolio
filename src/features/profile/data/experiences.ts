@@ -9,24 +9,23 @@ export const EXPERIENCES: Experience[] = [
     positions: [
       {
         id: "20f8bfe5-b6a3-4b0d-ac2f-6fccd50d417e",
-        title: "Full Stack Web Developer",
+        title: "Full Stack Developer",
         employmentPeriod: {
           start: "07.2025",
+          end: "12.2025",
         },
+
         employmentType: "Full-time",
         icon: "code",
-        description: `- Developed **PindEats**, a food gift mart delivery application with comprehensive features.
-- Converted **Figma designs to Next.js** components with pixel-perfect implementation.
-- Built **responsive front-end** interfaces ensuring seamless experience across all devices.
-- Created **custom APIs** for food management and user management systems.
-- Implemented **authentication system** using NextAuth.js with secure credential handling.
-- Integrated **NodeMailer** for automated email notifications:
-  - Order confirmations and updates for customers
-  - Real-time order notifications for vendors
-- Developed and integrated **APIs for vendor dashboard** with comprehensive data management.
-- Optimized **SEO** for better search engine visibility and performance.
-- Ensured UI/UX consistency and adherence to modern web standards.
-- Analyzed technical requirements and provided optimal solutions for project challenges.`,
+        description: `- Developed production-level **multi-vendor food delivery and gift mart platform** with comprehensive role-based access control and module management.
+- Built and maintained **two distinct dashboards** (Customer, Vendor) with dynamic UI rendering, conditional logic, and real-time data updates.
+- Implemented **secure authentication and authorization** using NextAuth.js with protected routes, session management, and credential handling.
+- Designed and integrated **RESTful APIs** handling orders, food management, and user operations across multiple modules with shared schemas and optimized data flow.
+- Translated **Figma designs into responsive, pixel-perfect UI components** using Tailwind CSS and modern design systems.
+- Integrated **Resend for transactional email notifications** including order confirmations, status updates, and vendor alerts.
+- Optimized **MongoDB queries** using Mongoose lean queries and schema design patterns for improved database performance.
+- Ensured **SEO optimization** and adherence to modern web standards for better search engine visibility.
+`,
         skills: [
           "Next.js",
           "Express.js",
@@ -35,7 +34,7 @@ export const EXPERIENCES: Experience[] = [
           "MongoDB",
           "ShadCN UI",
           "Node.js",
-          "Node Mailer",
+          "Resend",
           "Figma to Code",
           "Responsive Design",
           "API Development",
@@ -47,6 +46,6 @@ export const EXPERIENCES: Experience[] = [
         isExpanded: true,
       },
     ],
-    isCurrentEmployer: true,
+    isCurrentEmployer: false,
   },
 ];

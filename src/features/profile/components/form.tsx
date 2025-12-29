@@ -1,6 +1,7 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
+import emailjs from "@emailjs/browser";
 import { Loader2 } from "lucide-react";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
@@ -45,24 +46,33 @@ export function Contact() {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("/api/send-message", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      // Send email using EmailJS
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        {
+          from_name: data.name,
+          from_name_initial: data.name.charAt(0).toUpperCase(),
+          from_email: data.email,
+          message: data.message,
+          current_date: new Date().toLocaleString("en-US", {
+            month: "long",
+            day: "numeric",
+            year: "numeric",
+            hour: "2-digit",
+            minute: "2-digit",
+          }),
         },
-        body: JSON.stringify(data),
-      });
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+      );
 
-      if (!response.ok) {
-        throw new Error("Failed to send message");
-      }
-
-      toast("Message sent!", {
+      toast.success("Message sent!", {
         description: "Thank you for your message. I'll get back to you soon.",
       });
 
       form.reset();
     } catch (error) {
+      console.error("EmailJS Error:", error);
       toast.error("Error", {
         description: "Failed to send message. Please try again later.",
       });

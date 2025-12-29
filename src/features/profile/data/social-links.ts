@@ -5,7 +5,7 @@ export const SOCIAL_LINKS: SocialLink[] = [
     icon: "https://assets.chanhdai.com/images/link-icons/linkedin.webp?t=1759581475",
     title: "LinkedIn",
     description: "Muhammad Yousaf",
-    href: "https://www.linkedin.com/in/muhammad-yousaf-b357172b6",
+    href: "https://linkedin.com/in/yousaf-dev18",
   },
   {
     icon: "https://assets.chanhdai.com/images/link-icons/github.webp?t=1759581475",

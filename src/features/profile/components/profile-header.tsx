@@ -17,7 +17,6 @@ export function ProfileHeader() {
         </div>
         <SimpleTooltip content="I'm from Pakistan">
           {/* Flag of Pakistan */}
-          {/* Flag of Pakistan */}
           <svg
             className="absolute top-0 -left-px h-8 sm:h-9"
             viewBox="0 0 30 20"
