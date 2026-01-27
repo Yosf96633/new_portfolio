@@ -21,7 +21,7 @@ export function TechStack() {
           "bg-zinc-950/0.75 dark:bg-white/0.75"
         )}
       >
-        <ul className="flex flex-wrap gap-4 select-none">
+        <ul className="flex flex-wrap items-center justify-center gap-3 px-2 select-none sm:gap-4 sm:px-4 md:gap-6 md:px-6">
           {TECH_STACK.map((tech) => {
             // Generate a unique identifier for mapping
             const identifier =
@@ -31,7 +31,7 @@ export function TechStack() {
             // Determine if we should fetch from remote server or local public folder
             const isRemote = !!tech.key;
 
-            // Map for local file names (based on your comments)
+            // Map for local file names (updated with correct identifiers)
             const localFileMap: Record<string, string> = {
               python: "python",
               github: "github",
@@ -41,6 +41,10 @@ export function TechStack() {
               langchain: "langchain",
               langgraph: "langgraph",
               vercel: "vercel",
+              "better-auth": "better_auth", // Fixed: using hyphen to match identifier
+              "drizzle-orm": "drizzle-orm", // Fixed: using full identifier
+              "nest-js": "nestjs", // Fixed: using hyphen to match identifier
+              postgresql: "postgresql",
             };
 
             const localFileName = localFileMap[identifier] || identifier;
@@ -70,7 +74,7 @@ export function TechStack() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={tech.title}
-                    className="transition-transform hover:scale-110"
+                    className="transition-transform hover:scale-110 active:scale-95"
                   >
                     {tech.theme ? (
                       <>
@@ -79,7 +83,7 @@ export function TechStack() {
                           alt={`${tech.title} light icon`}
                           width={62}
                           height={62}
-                          className="hidden [html.light_&]:block"
+                          className="hidden h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 [html.light_&]:block"
                           unoptimized
                         />
                         <Image
@@ -87,7 +91,7 @@ export function TechStack() {
                           alt={`${tech.title} dark icon`}
                           width={62}
                           height={62}
-                          className="hidden [html.dark_&]:block"
+                          className="hidden h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 [html.dark_&]:block"
                           unoptimized
                         />
                       </>
@@ -97,6 +101,7 @@ export function TechStack() {
                         alt={`${tech.title} icon`}
                         width={62}
                         height={62}
+                        className="h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16"
                         unoptimized
                       />
                     )}

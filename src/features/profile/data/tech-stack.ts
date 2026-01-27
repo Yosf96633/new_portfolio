@@ -121,4 +121,25 @@ export const TECH_STACK: TechStack[] = [
     categories: ["Tools", "AI"],
     theme: true,
   },
+  {
+    title: "Better Auth",
+    href: "https://www.better-auth.com/",
+    categories: ["Authentication"],
+    theme: true,
+  },
+  {
+    title: "Drizzle ORM",
+    href: "https://orm.drizzle.team/",
+    categories: ["ORM"],
+  },
+  {
+    title: "Nest js",
+    href: "https://nestjs.com/",
+    categories: ["Framework"],
+  },
+  {
+    title: "PostgreSQL",
+    href: "https://www.postgresql.org/",
+    categories: ["Database"],
+  },
 ];

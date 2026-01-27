@@ -17,14 +17,16 @@ export const EXPERIENCES: Experience[] = [
 
         employmentType: "Full-time",
         icon: "code",
-        description: `- Developed production-level **multi-vendor food delivery and gift mart platform** with comprehensive role-based access control and module management.
-- Built and maintained **two distinct dashboards** (Customer, Vendor) with dynamic UI rendering, conditional logic, and real-time data updates.
-- Implemented **secure authentication and authorization** using NextAuth.js with protected routes, session management, and credential handling.
-- Designed and integrated **RESTful APIs** handling orders, food management, and user operations across multiple modules with shared schemas and optimized data flow.
-- Translated **Figma designs into responsive, pixel-perfect UI components** using Tailwind CSS and modern design systems.
-- Integrated **Resend for transactional email notifications** including order confirmations, status updates, and vendor alerts.
-- Optimized **MongoDB queries** using Mongoose lean queries and schema design patterns for improved database performance.
-- Ensured **SEO optimization** and adherence to modern web standards for better search engine visibility.
+        description: `A production-level multi-vendor food delivery and gift mart platform with comprehensive role-based access control and module management.
+
+**Project Focus:**
+
+- **Dashboard Architecture**: Built two distinct dashboards (Customer, Vendor) with dynamic UI rendering, conditional logic, and real-time data updates
+- **Authentication & Security**: Implemented secure authentication using NextAuth.js with protected routes, session management, and credential handling
+- **API Development**: Designed and integrated RESTful APIs handling orders, food management, and user operations with optimized data flow
+- **Design Implementation**: Translated Figma designs into responsive, pixel-perfect UI components using Tailwind CSS
+- **Email Integration**: Integrated Resend for transactional notifications including order confirmations and status updates
+- **Database Optimization**: Optimized MongoDB queries using Mongoose lean queries and schema design patterns
 `,
         skills: [
           "Next.js",

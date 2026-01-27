@@ -35,6 +35,42 @@ export const PROJECTS: Project[] = [
     isExpanded: true,
   },
   {
+    id: "better-auth-starter",
+    title: "Better Auth Starter",
+    period: {
+      start: "2026",
+    },
+    link: "https://ba-starter7.vercel.app/", // Add your deployment link here
+    skills: [
+      "Next.js",
+      "TypeScript",
+      "Better Auth",
+      "Neon",
+      "Drizzle ORM",
+      "Resend",
+      "Arcjet",
+      "shadcn/ui",
+      "Tailwind CSS",
+      "Vercel",
+    ],
+    description: `A comprehensive authentication starter template built to master Better Auth implementation with Next.js, featuring modern authentication patterns and security best practices.
+
+**Key Features:**
+
+- **Multiple Authentication Methods**: Email/password, Google OAuth, GitHub OAuth, and Passkeys support
+- **Two-Factor Authentication**: Enhanced security with 2FA implementation
+- **Rate Limiting**: Arcjet integration for API rate limiting and bot protection
+- **Session Management**: Secure session handling and user session tracking
+- **Account Linking**: Link multiple authentication providers to a single account
+- **Password Recovery**: Complete forgot password and reset password flow
+- **Email Integration**: Resend API for transactional emails and verification
+- **Admin Features**: Admin plugin for user management and authorization
+- **Database**: Neon PostgreSQL with Drizzle ORM for type-safe database operations
+- **Modern UI**: Built with shadcn/ui components and Tailwind CSS
+- **API Routes**: Custom Next.js API routes for authentication endpoints`,
+    isExpanded: false,
+  },
+  {
     id: "cambot",
     title: "CamBot - Campus Query Chatbot",
     period: {
