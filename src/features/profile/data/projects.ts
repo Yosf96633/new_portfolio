@@ -101,29 +101,6 @@ export const PROJECTS: Project[] = [
 - **College-Specific**: Trained on campus information to provide accurate institutional queries`,
   },
   {
-    id: "client-portfolio",
-    title: "Client Portfolio Website",
-    period: {
-      start: "2024",
-    },
-    link: "",
-    skills: [
-      "Client Project",
-      "React",
-      "Tailwind CSS",
-      "Framer Motion",
-      "EmailJS",
-    ],
-    description: `A modern, animated portfolio website built for a client with smooth interactions and email integration.
-
-**Features:**
-
-- **Smooth Animations**: Framer Motion for fluid page transitions and element animations
-- **Contact Form**: EmailJS integration for seamless email communication
-- **Responsive Design**: Mobile-first approach ensuring perfect display on all devices
-- **Modern UI**: Clean and professional design with attention to detail`,
-  },
-  {
     id: "auranest",
     title: "AuraNest E-Commerce",
     period: {
@@ -149,29 +126,6 @@ export const PROJECTS: Project[] = [
 - **Routing**: React Router DOM for seamless navigation
 - **Responsive**: Fully responsive design for all screen sizes
 - **Data Handling**: Complete product browsing, filtering, and cart management`,
-  },
-  {
-    id: "positivus",
-    title: "Positivus Landing Page",
-    period: {
-      start: "2024",
-    },
-    link: "https://positivus7.netlify.app/",
-    skills: [
-      "React",
-      "Tailwind CSS",
-      "Figma to Code",
-      "Responsive Design",
-      "Netlify",
-    ],
-    description: `A responsive marketing agency landing page created from Figma designs.
-
-**Project Focus:**
-
-- **Design Implementation**: Accurate conversion of Figma designs to React components
-- **Responsive Layout**: Mobile-first responsive design approach
-- **Clean Code**: Well-structured and maintainable codebase
-- **Modern Styling**: Tailwind CSS for utility-first styling`,
   },
   {
     id: "blogify",

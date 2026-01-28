@@ -26,12 +26,9 @@ export function ExperiencePositionItem({
 
   return (
     <CollapsibleWithContext defaultOpen={position.isExpanded} asChild>
-      <div className="relative last:before:absolute last:before:h-full last:before:w-4 last:before:bg-background">
+      <div className="relative">
         <CollapsibleTrigger
-          className={cn(
-            "block w-full text-left select-none",
-            "relative before:absolute before:-top-1 before:-right-1 before:-bottom-1.5 before:left-7 before:-z-1 before:rounded-lg hover:before:bg-accent2"
-          )}
+          className={cn("block w-full text-left select-none", "relative")}
         >
           <div className="relative z-1 mb-1 flex items-center gap-3">
             <div
@@ -57,7 +54,7 @@ export function ExperiencePositionItem({
             </div>
           </div>
 
-          <div className="flex items-center gap-2 pl-9 text-sm text-muted-foreground">
+          <div className="flex items-center gap-2 text-sm text-muted-foreground">
             {position.employmentType && (
               <>
                 <dl>
@@ -95,13 +92,13 @@ export function ExperiencePositionItem({
 
         <CollapsibleContent className="overflow-hidden duration-300 data-[state=closed]:animate-collapsible-fade-up data-[state=open]:animate-collapsible-fade-down">
           {position.description && (
-            <Prose className="pt-2 pl-9">
+            <Prose className="pt-2">
               <Markdown>{position.description}</Markdown>
             </Prose>
           )}
 
           {Array.isArray(position.skills) && position.skills.length > 0 && (
-            <ul className="flex flex-wrap gap-1.5 pt-2 pl-9">
+            <ul className="flex flex-wrap gap-1.5 pt-2">
               {position.skills.map((skill, index) => (
                 <li key={index} className="flex">
                   <Tag>{skill}</Tag>

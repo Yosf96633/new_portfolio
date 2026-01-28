@@ -56,25 +56,25 @@ export const TECH_STACK: TechStack[] = [
     href: "https://redux.js.org/",
     categories: ["State Management"],
   },
-  {
-    key: "react-router",
-    title: "React Router",
-    href: "https://reactrouter.com/",
-    categories: ["Library", "Navigation"],
-    theme: true,
-  },
+  // {
+  //   key: "react-router",
+  //   title: "React Router",
+  //   href: "https://reactrouter.com/",
+  //   categories: ["Library", "Navigation"],
+  //   theme: true,
+  // },
   {
     title: "GitHub",
     href: "https://github.com/",
     categories: ["Version Control", "Platform"],
     theme: true,
   },
-  {
-    key: "docker",
-    title: "Docker",
-    href: "https://www.docker.com/",
-    categories: ["Containerization"],
-  },
+  // {
+  //   key: "docker",
+  //   title: "Docker",
+  //   href: "https://www.docker.com/",
+  //   categories: ["Containerization"],
+  // },
   {
     key: "mongodb",
     title: "MongoDB",
@@ -132,11 +132,11 @@ export const TECH_STACK: TechStack[] = [
     href: "https://orm.drizzle.team/",
     categories: ["ORM"],
   },
-  {
-    title: "Nest js",
-    href: "https://nestjs.com/",
-    categories: ["Framework"],
-  },
+  // {
+  //   title: "Nest js",
+  //   href: "https://nestjs.com/",
+  //   categories: ["Framework"],
+  // },
   {
     title: "PostgreSQL",
     href: "https://www.postgresql.org/",

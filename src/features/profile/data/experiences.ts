@@ -40,7 +40,6 @@ export const EXPERIENCES: Experience[] = [
           "Figma to Code",
           "Responsive Design",
           "API Development",
-          "SEO",
           "Teamwork",
           "Research",
           "Problem-solving",

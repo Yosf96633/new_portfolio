@@ -7,14 +7,14 @@ import { ExperiencePositionItem } from "./experience-position-item";
 export function ExperienceItem({ experience }: { experience: Experience }) {
   return (
     <div className="screen-line-after space-y-4 py-4">
-      <div className="flex items-center gap-3">
-        <div className="flex size-6 shrink-0 items-center justify-center select-none">
+      <div className="flex items-center gap-3 px-4">
+        <div className="flex size-6 shrink-0 items-center select-none">
           {experience.companyLogo ? (
             <Image
               src={experience.companyLogo}
               alt={experience.companyName}
-              width={24}
-              height={24}
+              width={28}
+              height={28}
               quality={100}
               className="rounded-full"
               unoptimized
@@ -38,7 +38,7 @@ export function ExperienceItem({ experience }: { experience: Experience }) {
         )}
       </div>
 
-      <div className="relative space-y-4 before:absolute before:left-3 before:h-full before:w-px before:bg-border">
+      <div className="space-y-0">
         {experience.positions.map((position) => (
           <ExperiencePositionItem key={position.id} position={position} />
         ))}
