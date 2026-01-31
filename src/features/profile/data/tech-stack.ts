@@ -1,6 +1,7 @@
 import type { TechStack } from "../types/tech-stack";
 
 export const TECH_STACK: TechStack[] = [
+  // Languages
   {
     key: "typescript",
     title: "TypeScript",
@@ -18,12 +19,16 @@ export const TECH_STACK: TechStack[] = [
     href: "https://www.python.org/",
     categories: ["Language"],
   },
+
+  // Runtime Environment
   {
     key: "nodejs",
     title: "Node.js",
     href: "https://nodejs.org/",
     categories: ["Runtime Environment"],
   },
+
+  // Frontend Frameworks & Libraries
   {
     key: "react",
     title: "React",
@@ -37,6 +42,22 @@ export const TECH_STACK: TechStack[] = [
     categories: ["Framework"],
     theme: true,
   },
+
+  // Backend Frameworks
+  {
+    title: "Nest js",
+    href: "https://nestjs.com/",
+    categories: ["Framework"],
+  },
+
+  {
+    title: "Express js",
+    href: "https://expressjs.com/",
+    categories: ["Framework"],
+    theme: true,
+  },
+
+  // Styling & UI Components
   {
     key: "tailwindcss",
     title: "Tailwind CSS",
@@ -50,31 +71,21 @@ export const TECH_STACK: TechStack[] = [
     categories: ["Library", "Component Library"],
     theme: true,
   },
+
+  // State Management
   {
     key: "redux",
     title: "Redux",
     href: "https://redux.js.org/",
     categories: ["State Management"],
   },
-  // {
-  //   key: "react-router",
-  //   title: "React Router",
-  //   href: "https://reactrouter.com/",
-  //   categories: ["Library", "Navigation"],
-  //   theme: true,
-  // },
+
+  // Databases
   {
-    title: "GitHub",
-    href: "https://github.com/",
-    categories: ["Version Control", "Platform"],
-    theme: true,
+    title: "PostgreSQL",
+    href: "https://www.postgresql.org/",
+    categories: ["Database"],
   },
-  // {
-  //   key: "docker",
-  //   title: "Docker",
-  //   href: "https://www.docker.com/",
-  //   categories: ["Containerization"],
-  // },
   {
     key: "mongodb",
     title: "MongoDB",
@@ -86,16 +97,35 @@ export const TECH_STACK: TechStack[] = [
     href: "https://qdrant.tech/",
     categories: ["Database", "Vector Database"],
   },
+
+  // ORMs & ODMs
+  {
+    title: "Drizzle ORM",
+    href: "https://orm.drizzle.team/",
+    categories: ["ORM"],
+  },
   {
     title: "Mongoose",
     href: "https://mongoosejs.com/",
     categories: ["Library", "ODM"],
   },
+
+  // Validation & Schema
   {
     title: "Zod",
     href: "https://zod.dev/",
     categories: ["Library", "Validation"],
   },
+
+  // Authentication
+  {
+    title: "Better Auth",
+    href: "https://www.better-auth.com/",
+    categories: ["Authentication"],
+    theme: true,
+  },
+
+  // AI & LLM Frameworks
   {
     title: "LangChain",
     href: "https://www.langchain.com/",
@@ -108,10 +138,12 @@ export const TECH_STACK: TechStack[] = [
     categories: ["AI", "Framework"],
     theme: true,
   },
+
+  // Development Tools & Platforms
   {
-    title: "Vercel",
-    href: "https://vercel.com/",
-    categories: ["Platform", "Deployment"],
+    title: "GitHub",
+    href: "https://github.com/",
+    categories: ["Version Control", "Platform"],
     theme: true,
   },
   {
@@ -121,25 +153,12 @@ export const TECH_STACK: TechStack[] = [
     categories: ["Tools", "AI"],
     theme: true,
   },
+
+  // Deployment & Hosting
   {
-    title: "Better Auth",
-    href: "https://www.better-auth.com/",
-    categories: ["Authentication"],
+    title: "Vercel",
+    href: "https://vercel.com/",
+    categories: ["Platform", "Deployment"],
     theme: true,
-  },
-  {
-    title: "Drizzle ORM",
-    href: "https://orm.drizzle.team/",
-    categories: ["ORM"],
-  },
-  // {
-  //   title: "Nest js",
-  //   href: "https://nestjs.com/",
-  //   categories: ["Framework"],
-  // },
-  {
-    title: "PostgreSQL",
-    href: "https://www.postgresql.org/",
-    categories: ["Database"],
   },
 ];
