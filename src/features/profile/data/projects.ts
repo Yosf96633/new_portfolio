@@ -42,7 +42,7 @@ export const PROJECTS: Project[] = [
 - Parallel analysis branches for emotions, patterns, loved aspects, improvements, and viewer requests
 - Automatic transcript availability detection with non-blocking error handling
 - Job progress tracking with percentage-based updates and stage-specific messages`,
-    isExpanded: false,
+    isExpanded: true,
   },
   {
     id: "better-auth-starter",
@@ -111,13 +111,13 @@ export const PROJECTS: Project[] = [
 - **Custom API Routes**: Built with Next.js API routes for backend functionality
 - **Database**: MongoDB for data persistence
 - **Fully Typed**: TypeScript for type safety throughout the application`,
-    isExpanded: true,
+    isExpanded: false,
   },
   {
     id: "cambot",
     title: "CamBot - Campus Query Chatbot",
     period: {
-      start: "2024",
+      start: "2025",
     },
     link: "https://cambot-fyp.vercel.app/",
     skills: [
