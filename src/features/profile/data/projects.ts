@@ -50,7 +50,7 @@ export const PROJECTS: Project[] = [
     period: {
       start: "2026",
     },
-    link: "https://ba-starter7.vercel.app/", // Add your deployment link here
+    link: "https://www.betterauthstarter.site/",
     skills: [
       "Next.js",
       "TypeScript",
