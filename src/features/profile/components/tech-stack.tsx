@@ -34,13 +34,13 @@ export function TechStack() {
             // Map for local file names (updated with correct identifiers)
             const localFileMap: Record<string, string> = {
               python: "python",
+              fastapi: "fastapi",
               github: "github",
               qdrant: "qdrantdb",
               mongoose: "mongoose",
               zod: "zod",
               langchain: "langchain",
               langgraph: "langgraph",
-              vercel: "vercel",
               "better-auth": "better_auth", // Fixed: using hyphen to match identifier
               "drizzle-orm": "drizzle-orm", // Fixed: using full identifier
               "nest-js": "nestjs", // Fixed: using hyphen to match identifier

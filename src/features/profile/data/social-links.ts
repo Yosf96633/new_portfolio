@@ -17,7 +17,7 @@ export const SOCIAL_LINKS: SocialLink[] = [
     icon: "/cv/image.png",
     title: "Download CV",
     description: "Resume & Portfolio",
-    href: "/cv/yousaf.pdf", // Update with your actual CV path
+    href: "/cv/Muhammad_Yousaf_CV.pdf", // Update with your actual CV path
     download: true, // Add this flag
   },
 ];

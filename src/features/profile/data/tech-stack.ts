@@ -56,6 +56,12 @@ export const TECH_STACK: TechStack[] = [
     categories: ["Framework"],
     theme: true,
   },
+  {
+    title: "Fastapi",
+    href: "https://fastapi.tiangolo.com/",
+    categories: ["Framework"],
+    theme: false,
+  },
 
   // Styling & UI Components
   {
@@ -144,21 +150,6 @@ export const TECH_STACK: TechStack[] = [
     title: "GitHub",
     href: "https://github.com/",
     categories: ["Version Control", "Platform"],
-    theme: true,
-  },
-  {
-    key: "chatgpt",
-    title: "ChatGPT",
-    href: "https://chatgpt.com/",
-    categories: ["Tools", "AI"],
-    theme: true,
-  },
-
-  // Deployment & Hosting
-  {
-    title: "Vercel",
-    href: "https://vercel.com/",
-    categories: ["Platform", "Deployment"],
     theme: true,
   },
 ];
