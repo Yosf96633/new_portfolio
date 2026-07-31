@@ -46,7 +46,7 @@ export const EXPERIENCES: Experience[] = [
     id: "Code Expert",
     companyName: "Code Expert",
     companyLogo:
-      "https://www.codeexpertx.com/_next/image?url=%2FLOGO.png&w=1080&q=75",
+      "/companies_logo/code-expert.png",
     positions: [
       {
         id: "20f8bfe5-b6a3-4b0d-ac2f-6fccd50d417e",
