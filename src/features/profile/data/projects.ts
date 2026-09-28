@@ -2,6 +2,47 @@ import type { Project } from "../types/projects";
 
 export const PROJECTS: Project[] = [
   {
+    id: "myshell",
+    title: "myShell - Unix-like Command Shell",
+    period: {
+      start: "09.2026",
+    },
+    link: "https://github.com/Yosf96633/myshell",
+    skills: [
+      "C++20",
+      "CMake",
+      "POSIX APIs",
+      "Unix Process Management",
+      "Command Parsing",
+      "File Descriptor Management",
+      "Signal Handling",
+      "Job Control",
+      "CTest",
+      "Pseudo-Terminals",
+    ],
+    description: `A Unix-like command shell built from scratch in C++20 to explore how real shells parse commands manage processes control terminals and coordinate Unix resources. It supports external programs concurrent pipelines redirections environment expansion aliases shell functions command history and foreground or background jobs through an interactive terminal interface.
+
+**Key Technical Achievements:**
+
+- **Quote-Aware Command Parser**: Built a dedicated parser for single and double quotes backslash escaping environment assignments parameter expansion and syntax validation while correctly distinguishing quoted pipeline and background operators from shell control syntax
+- **Concurrent Pipeline Execution**: Implemented multi-stage pipelines with one child process per stage shared process groups correct file-descriptor wiring and final-stage exit status propagation
+- **Foreground and Background Job Control**: Added process-group based job management with terminal handoff background execution and the \`jobs\` \`fg\` and \`bg\` built-ins while preventing zombie processes through background reaping
+- **Signal-Safe Interactive Behavior**: Coordinated \`Ctrl+C\` \`Ctrl+\\\` and \`Ctrl+Z\` handling so signals reach foreground jobs without terminating the shell and prompt editing remains responsive
+- **Transactional Redirection Engine**: Supported input output append descriptor duplication and descriptor closure with left-to-right shell semantics plus automatic restoration of parent file descriptors after built-ins complete
+- **Command Resolution Cache**: Created PATH-based executable lookup with reusable path caching hit tracking invalidation when PATH changes and inspection through \`hash\` and \`type\` built-ins
+- **Extensible Shell Features**: Developed a built-in registry aliases simple single-line functions recursion protection persistent environment assignments and session history with arrow-key navigation
+- **Pseudo-Terminal Integration Testing**: Built automated CTest coverage for parsing execution exit statuses signals process groups terminal ownership and interactive job control using pseudo-terminals
+
+**Technical Architecture:**
+
+- Runtime: C++20 application using POSIX process signal file-descriptor and terminal APIs
+- Parsing: Two-stage pipeline and command parser producing structured commands before execution begins
+- Execution: Parent-side dispatch for stateful built-ins plus fork and exec process groups for external commands pipelines and background jobs
+- Terminal Control: termios-based line editing process-group management and explicit terminal ownership handoff
+- Build and Testing: CMake with compiler warnings CTest unit tests and pseudo-terminal integration tests`,
+    isExpanded: true,
+  },
+  {
     id: "docsai",
     title: "DocsAI - Legal Document Analysis Assistant",
     period: {
@@ -40,7 +81,7 @@ export const PROJECTS: Project[] = [
 - AI Stack: Groq Llama 3.3 for generation plus OpenAI text-embedding-3-small for vectorization plus Cohere Reranker for result refinement
 - Storage: Qdrant hybrid vector database plus PostgreSQL for metadata and thread management plus Cloudinary for PDF storage
 - Workflow: Two independent LangGraph pipelines handling document ingestion and chat generation separately`,
-    isExpanded: true,
+    isExpanded: false,
   },
   {
     id: "vidly",
