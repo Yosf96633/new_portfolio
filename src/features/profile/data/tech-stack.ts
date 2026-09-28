@@ -1,155 +1,239 @@
 import type { TechStack } from "../types/tech-stack";
 
+// One continuous grid, ordered by area of work.
 export const TECH_STACK: TechStack[] = [
-  // Languages
+  // Programming languages
   {
-    key: "typescript",
-    title: "TypeScript",
-    href: "https://www.typescriptlang.org/",
-    categories: ["Language"],
+    title: "C++",
+    href: "https://isocpp.org/",
+    icon: "/tech-icons/github-profile/cplusplus.svg",
   },
   {
-    key: "js",
-    title: "JavaScript",
-    href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
-    categories: ["Language"],
+    title: "C",
+    href: "https://www.c-language.org/",
+    icon: "/tech-icons/github-profile/c.svg",
+  },
+  {
+    title: "Rust",
+    href: "https://www.rust-lang.org/",
+    icon: "/tech-icons/github-profile/rust.svg",
   },
   {
     title: "Python",
     href: "https://www.python.org/",
-    categories: ["Language"],
+    icon: "/tech-icons/github-profile/python.svg",
+  },
+  {
+    title: "JavaScript",
+    href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+    icon: "/tech-icons/github-profile/javascript.svg",
+  },
+  {
+    title: "TypeScript",
+    href: "https://www.typescriptlang.org/",
+    icon: "/tech-icons/github-profile/typescript.svg",
+  },
+  {
+    title: "Bash",
+    href: "https://www.gnu.org/software/bash/",
+    icon: "/tech-icons/github-profile/bash.svg",
   },
 
-  // Runtime Environment
+  // Frontend
   {
-    key: "nodejs",
-    title: "Node.js",
-    href: "https://nodejs.org/",
-    categories: ["Runtime Environment"],
-  },
-
-  // Frontend Frameworks & Libraries
-  {
-    key: "react",
-    title: "React",
-    href: "https://react.dev/",
-    categories: ["Library", "UI Library"],
-  },
-  {
-    key: "nextjs2",
     title: "Next.js",
     href: "https://nextjs.org/",
-    categories: ["Framework"],
-    theme: true,
-  },
-
-  // Backend Frameworks
-  {
-    title: "Nest js",
-    href: "https://nestjs.com/",
-    categories: ["Framework"],
-  },
-
-  {
-    title: "Express js",
-    href: "https://expressjs.com/",
-    categories: ["Framework"],
-    theme: true,
+    icon: "/tech-icons/github-profile/nextjs.svg",
   },
   {
-    title: "Fastapi",
-    href: "https://fastapi.tiangolo.com/",
-    categories: ["Framework"],
-    theme: false,
-  },
-
-  // Styling & UI Components
-  {
-    key: "tailwindcss",
-    title: "Tailwind CSS",
-    href: "https://tailwindcss.com/",
-    categories: ["Framework"],
+    title: "React",
+    href: "https://react.dev/",
+    icon: "/tech-icons/github-profile/react.svg",
   },
   {
-    key: "shadcn-ui",
-    title: "shadcn/ui",
-    href: "https://ui.shadcn.com/",
-    categories: ["Library", "Component Library"],
-    theme: true,
-  },
-
-  // State Management
-  {
-    key: "redux",
     title: "Redux",
     href: "https://redux.js.org/",
-    categories: ["State Management"],
+    icon: "/tech-icons/github-profile/redux.svg",
+  },
+  {
+    title: "Zustand",
+    href: "https://zustand.docs.pmnd.rs/",
+    icon: "/tech-icons/github-profile/zustand.png",
+  },
+  {
+    title: "Tailwind CSS",
+    href: "https://tailwindcss.com/",
+    icon: "/tech-icons/github-profile/tailwindcss.svg",
+  },
+  {
+    title: "shadcn/ui",
+    href: "https://ui.shadcn.com/",
+    icon: "/tech-icons/github-profile/shadcnui.svg",
   },
 
-  // Databases
+  // Backend, APIs, authentication, and validation
+  {
+    title: "Node.js",
+    href: "https://nodejs.org/",
+    icon: "/tech-icons/github-profile/nodejs.svg",
+  },
+  {
+    title: "Express",
+    href: "https://expressjs.com/",
+    icon: "/tech-icons/github-profile/express.svg",
+  },
+  {
+    title: "NestJS",
+    href: "https://nestjs.com/",
+    icon: "/tech-icons/github-profile/nestjs.svg",
+  },
+  {
+    title: "FastAPI",
+    href: "https://fastapi.tiangolo.com/",
+    icon: "/tech-icons/github-profile/fastapi.svg",
+  },
+  {
+    title: "WebSockets",
+    href: "https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API",
+    icon: "/tech-icons/github-profile/websockets.svg",
+  },
+  {
+    title: "Better Auth",
+    href: "https://www.better-auth.com/",
+    icon: "/tech-icons/github-profile/betterauth.svg",
+  },
+  {
+    title: "Auth.js",
+    href: "https://authjs.dev/",
+    icon: "/tech-icons/github-profile/authjs.png",
+  },
+  {
+    title: "JSON Web Tokens",
+    href: "https://jwt.io/",
+    icon: "/tech-icons/github-profile/jsonwebtokens.svg",
+  },
+  {
+    title: "Zod",
+    href: "https://zod.dev/",
+    icon: "/tech-icons/github-profile/zod.svg",
+  },
+
+  // Databases, ORM, and ODM
   {
     title: "PostgreSQL",
     href: "https://www.postgresql.org/",
-    categories: ["Database"],
+    icon: "/tech-icons/github-profile/postgresql.svg",
   },
   {
-    key: "mongodb",
     title: "MongoDB",
     href: "https://www.mongodb.com/",
-    categories: ["Database"],
+    icon: "/tech-icons/github-profile/mongodb.svg",
   },
   {
-    title: "Qdrant",
-    href: "https://qdrant.tech/",
-    categories: ["Database", "Vector Database"],
+    title: "Redis",
+    href: "https://redis.io/",
+    icon: "/tech-icons/github-profile/redis.svg",
   },
-
-  // ORMs & ODMs
   {
     title: "Drizzle ORM",
     href: "https://orm.drizzle.team/",
-    categories: ["ORM"],
+    icon: "/tech-icons/github-profile/drizzle.svg",
   },
   {
     title: "Mongoose",
     href: "https://mongoosejs.com/",
-    categories: ["Library", "ODM"],
+    icon: "/tech-icons/github-profile/mongoose.svg",
   },
 
-  // Validation & Schema
-  {
-    title: "Zod",
-    href: "https://zod.dev/",
-    categories: ["Library", "Validation"],
-  },
-
-  // Authentication
-  {
-    title: "Better Auth",
-    href: "https://www.better-auth.com/",
-    categories: ["Authentication"],
-    theme: true,
-  },
-
-  // AI & LLM Frameworks
+  // AI, automation, and agentic workflows
   {
     title: "LangChain",
     href: "https://www.langchain.com/",
-    categories: ["AI", "Framework"],
-    theme: true,
+    icon: "/tech-icons/github-profile/langchain.svg",
   },
   {
     title: "LangGraph",
-    href: "https://langchain-ai.github.io/langgraph/",
-    categories: ["AI", "Framework"],
-    theme: true,
+    href: "https://www.langchain.com/langgraph",
+    icon: "/tech-icons/github-profile/langgraph.svg",
+  },
+  {
+    title: "n8n",
+    href: "https://n8n.io/",
+    icon: "/tech-icons/github-profile/n8n.svg",
+  },
+  {
+    title: "Model Context Protocol (MCP)",
+    href: "https://modelcontextprotocol.io/",
+    icon: "/tech-icons/github-profile/modelcontextprotocol.svg",
+  },
+  {
+    title: "Qdrant",
+    href: "https://qdrant.tech/",
+    icon: "/tech-icons/github-profile/qdrant.svg",
+  },
+  {
+    title: "Cohere",
+    href: "https://cohere.com/",
+    icon: "/tech-icons/github-profile/cohere.png",
   },
 
-  // Development Tools & Platforms
+  // Development and deployment tools
+  {
+    title: "Docker",
+    href: "https://www.docker.com/",
+    icon: "/tech-icons/github-profile/docker.svg",
+  },
+  {
+    title: "Git",
+    href: "https://git-scm.com/",
+    icon: "/tech-icons/github-profile/git.svg",
+  },
   {
     title: "GitHub",
     href: "https://github.com/",
-    categories: ["Version Control", "Platform"],
-    theme: true,
+    icon: "/tech-icons/github-black.svg",
+    darkIcon: "/tech-icons/github-white.svg",
+  },
+  {
+    title: "Vercel",
+    href: "https://vercel.com/",
+    icon: "/tech-icons/github-profile/vercel.svg",
+  },
+  {
+    title: "Render",
+    href: "https://render.com/",
+    icon: "/tech-icons/github-profile/render.svg",
+  },
+  {
+    title: "Playwright",
+    href: "https://playwright.dev/",
+    icon: "/tech-icons/github-profile/playwright.svg",
+  },
+
+  // Linux and offensive security tools
+  {
+    title: "Linux",
+    href: "https://www.linux.org/",
+    icon: "/tech-icons/github-profile/linux.svg",
+  },
+  {
+    title: "Nmap",
+    href: "https://nmap.org/",
+    icon: "/tech-icons/github-profile/nmap.png",
+  },
+  {
+    title: "Metasploit",
+    href: "https://www.metasploit.com/",
+    icon: "/tech-icons/github-profile/metasploit.png",
+  },
+  {
+    title: "Wireshark",
+    href: "https://www.wireshark.org/",
+    icon: "/tech-icons/github-profile/wireshark.png",
+  },
+  {
+    title: "Burp Suite",
+    href: "https://portswigger.net/burp",
+    icon: "/tech-icons/github-profile/burpsuite.svg",
   },
 ];

@@ -23,51 +23,8 @@ export function TechStack() {
       >
         <ul className="flex flex-wrap items-center justify-center gap-3 px-2 select-none sm:gap-4 sm:px-4 md:gap-6 md:px-6">
           {TECH_STACK.map((tech) => {
-            // Generate a unique identifier for mapping
-            const identifier =
-              tech.key ||
-              tech.title.toLowerCase().replace(/\s+/g, "-").replace(/\//g, "-");
-
-            // Determine if we should fetch from remote server or local public folder
-            const isRemote = !!tech.key;
-
-            // Map for local file names (updated with correct identifiers)
-            const localFileMap: Record<string, string> = {
-              python: "python",
-              fastapi: "fastapi",
-              github: "github",
-              qdrant: "qdrantdb",
-              mongoose: "mongoose",
-              zod: "zod",
-              langchain: "langchain",
-              langgraph: "langgraph",
-              "better-auth": "better_auth", // Fixed: using hyphen to match identifier
-              "drizzle-orm": "drizzle-orm", // Fixed: using full identifier
-              "nest-js": "nestjs", // Fixed: using hyphen to match identifier
-              postgresql: "postgresql",
-            };
-
-            const localFileName = localFileMap[identifier] || identifier;
-
-            // Build the appropriate image path
-            const getImagePath = (variant?: "light" | "dark") => {
-              if (isRemote) {
-                // Fetch from remote server
-                const suffix = variant ? `-${variant}` : "";
-                return `https://assets.chanhdai.com/images/tech-stack-icons/${tech.key}${suffix}.svg`;
-              } else {
-                // Fetch from local public folder
-                if (variant) {
-                  // For themed icons, check your comment pattern
-                  const themeVariant = variant === "light" ? "black" : "white";
-                  return `/tech-icons/${localFileName}-${themeVariant}.svg`;
-                }
-                return `/tech-icons/${localFileName}.svg`;
-              }
-            };
-
             return (
-              <li key={identifier} className="flex">
+              <li key={tech.title} className="flex">
                 <SimpleTooltip content={tech.title}>
                   <a
                     href={tech.href}
@@ -76,19 +33,19 @@ export function TechStack() {
                     aria-label={tech.title}
                     className="transition-transform hover:scale-110 active:scale-95"
                   >
-                    {tech.theme ? (
+                    {tech.darkIcon ? (
                       <>
                         <Image
-                          src={getImagePath("light")}
-                          alt={`${tech.title} light icon`}
+                          src={tech.icon}
+                          alt={`${tech.title} icon`}
                           width={62}
                           height={62}
                           className="hidden h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 [html.light_&]:block"
                           unoptimized
                         />
                         <Image
-                          src={getImagePath("dark")}
-                          alt={`${tech.title} dark icon`}
+                          src={tech.darkIcon}
+                          alt={`${tech.title} icon`}
                           width={62}
                           height={62}
                           className="hidden h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 [html.dark_&]:block"
@@ -97,7 +54,7 @@ export function TechStack() {
                       </>
                     ) : (
                       <Image
-                        src={getImagePath()}
+                        src={tech.icon}
                         alt={`${tech.title} icon`}
                         width={62}
                         height={62}
