@@ -23,6 +23,7 @@ These are the `original` SVG variants from [Devicon](https://github.com/devicons
 - [nodejs](https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg)
 - [postgresql](https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg)
 - [python](https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg)
+- [Prisma](https://raw.githubusercontent.com/devicons/devicon/master/icons/prisma/prisma-original.svg) (on a white tile for contrast)
 - [react](https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg)
 - [redis](https://raw.githubusercontent.com/devicons/devicon/master/icons/redis/redis-original.svg)
 - [redux](https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg)

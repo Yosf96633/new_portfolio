@@ -140,6 +140,11 @@ export const TECH_STACK: TechStack[] = [
     icon: "/tech-icons/github-profile/drizzle.svg",
   },
   {
+    title: "Prisma",
+    href: "https://www.prisma.io/",
+    icon: "/tech-icons/github-profile/prisma.svg",
+  },
+  {
     title: "Mongoose",
     href: "https://mongoosejs.com/",
     icon: "/tech-icons/github-profile/mongoose.svg",
