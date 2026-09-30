@@ -2,32 +2,30 @@ import type { User } from "@/features/profile/types/user";
 
 export const USER: User = {
   firstName: "Muhammad",
-  lastName: "Yousad",
+  lastName: "Yousaf",
   displayName: "Yousaf",
   username: "yosf",
   gender: "male",
   pronouns: "he/him",
-  bio: "Building the future, one microservice at a time.",
+  bio: "Building full-stack AI tools and Unix systems with TypeScript, Python, and C++.",
   flipSentences: [
-    "Building the future, one microservice at a time.",
-    "Full Stack Developer",
-    "GenAI & LLM Integration",
-    "Microservices & System Design",
+    "Building full-stack AI tools and Unix systems.",
+    "Full-Stack Developer",
+    "AI Agents & Document Search",
+    "C++ Systems & Unix Tooling",
   ],
   address: "Lahore, Punjab, Pakistan",
   phoneNumber: "KzkyIDMzNSA4NDg1NzMy", // E.164 format, base64 encoded (https://t.io.vn/base64-string-converter)
   email: "eW91c2FmLmRldjE4QGdtYWlsLmNvbQ==", // base64 encoded
   jobTitle: "Full Stack Developer",
   about: `
-Hey, I'm Muhammad Yousaf — a Full Stack Developer who loves turning complex problems into clean, scalable solutions.
+Hey, I'm Muhammad Yousaf — a full-stack developer building practical AI applications and exploring systems programming.
 
-I work primarily with the MERN stack and Next.js, building production-ready applications that balance performance with great user experience. Whether it's architecting REST APIs, optimizing database queries, or translating designs into pixel-perfect interfaces, I enjoy the entire process of bringing ideas to life.
+My recent projects include DocsAI, which answers questions about legal PDFs with cited passages; Vidly, which analyzes YouTube comments and transcripts; and AutoHunt, which helps review and automate job applications. I build their interfaces and APIs with Next.js, React, TypeScript, Node.js, and Python FastAPI, and use LangGraph to coordinate AI workflows. PostgreSQL, Redis, and Qdrant support the data, queues, and search behind them.
 
-Right now, I'm diving deep into AI development — exploring Agentic AI, LangChain, and LangGraph. I'm fascinated by the challenge of building systems that don't just execute commands but actually think and adapt. Combining my full-stack foundation with AI is where I see the real potential to create something impactful.
+I also built myShell, a Unix-like command shell in C++20. Working through parsing, pipelines, signals, and job control has sharpened how I think about processes and the tools my applications run on.
 
-Beyond the code, I'm always learning. System design, new frameworks, better patterns — I believe there's always a smarter way to solve a problem, and I'm constantly looking for it.
-
-If you're working on something interesting or just want to talk tech, feel free to reach out. I'm always up for good conversations and new opportunities.
+I enjoy taking a project from a responsive interface to the backend and the underlying workflow. If you're building something interesting in AI, web development, or developer tooling, I'd love to hear about it.
 `,
   avatar: "/image.png",
   ogImage:
