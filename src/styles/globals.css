@@ -45,6 +45,7 @@
 
   --font-sans: var(--font-sans);
   --font-mono: var(--font-mono);
+  --font-handwritten: var(--font-caveat);
 
   --shadow-popover: var(--shadow-popover);
 

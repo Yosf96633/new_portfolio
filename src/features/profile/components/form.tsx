@@ -2,7 +2,7 @@
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import emailjs from "@emailjs/browser";
-import { Loader2 } from "lucide-react";
+import { ArrowUpRight, Loader2, Mail } from "lucide-react";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
@@ -82,89 +82,130 @@ export function Contact() {
   }
 
   return (
-    <Panel>
+    <Panel id="contact">
       <PanelHeader>
         <PanelTitle>Contact</PanelTitle>
       </PanelHeader>
 
       <div className="grid grid-cols-[2rem_1fr]">
-        <div className="flex items-center justify-center border-r border-dashed border-edge bg-background">
-          <span className="rotate-270 py-8 text-sm whitespace-nowrap text-muted-foreground select-none">
-            Get in Touch
+        <div className="flex items-center justify-center border-r border-dashed border-edge bg-muted/20">
+          <span className="rotate-270 py-8 font-mono text-[10px] tracking-widest whitespace-nowrap text-muted-foreground select-none">
+            START A CONVERSATION
           </span>
         </div>
 
-        <div className="screen-line-after p-6 after:z-1">
-          <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-              <FormField
-                control={form.control}
-                name="name"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Name</FormLabel>
-                    <FormControl>
-                      <Input
-                        placeholder="Your name"
-                        disabled={isSubmitting}
-                        {...field}
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+        <div className="min-w-0">
+          <div className="flex items-start gap-3 border-b border-edge p-4 sm:p-6">
+            <div className="flex size-10 shrink-0 items-center justify-center rounded-lg border border-dashed border-edge bg-muted/30 text-muted-foreground">
+              <Mail className="size-4" aria-hidden="true" />
+            </div>
+            <div>
+              <h3 className="font-medium">Have something in mind?</h3>
+              <p className="mt-1 max-w-md text-sm leading-relaxed text-muted-foreground">
+                A project to build, a problem to solve, or an idea worth
+                exploring. Send me a note.
+              </p>
+            </div>
+          </div>
+          <div className="p-4 sm:p-6">
+            <Form {...form}>
+              <form
+                onSubmit={form.handleSubmit(onSubmit)}
+                className="space-y-5"
+              >
+                <div className="grid gap-5 sm:grid-cols-2">
+                  <FormField
+                    control={form.control}
+                    name="name"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="font-mono text-xs text-muted-foreground">
+                          Name
+                        </FormLabel>
+                        <FormControl>
+                          <Input
+                            placeholder="Your name"
+                            autoComplete="name"
+                            className="h-11 rounded-lg border-edge bg-muted/20 transition-colors focus-visible:bg-background"
+                            disabled={isSubmitting}
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
 
-              <FormField
-                control={form.control}
-                name="email"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Email</FormLabel>
-                    <FormControl>
-                      <Input
-                        type="email"
-                        placeholder="your.email@example.com"
-                        disabled={isSubmitting}
-                        {...field}
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+                  <FormField
+                    control={form.control}
+                    name="email"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="font-mono text-xs text-muted-foreground">
+                          Email
+                        </FormLabel>
+                        <FormControl>
+                          <Input
+                            type="email"
+                            placeholder="your.email@example.com"
+                            autoComplete="email"
+                            className="h-11 rounded-lg border-edge bg-muted/20 transition-colors focus-visible:bg-background"
+                            disabled={isSubmitting}
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                </div>
 
-              <FormField
-                control={form.control}
-                name="message"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Message</FormLabel>
-                    <FormControl>
-                      <Textarea
-                        placeholder="Your message..."
-                        className="min-h-[120px] resize-none"
-                        disabled={isSubmitting}
-                        {...field}
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+                <FormField
+                  control={form.control}
+                  name="message"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="font-mono text-xs text-muted-foreground">
+                        Message
+                      </FormLabel>
+                      <FormControl>
+                        <Textarea
+                          placeholder="Tell me a little about what you're working on…"
+                          className="min-h-[160px] resize-y rounded-lg border-edge bg-muted/20 p-3 leading-relaxed transition-colors focus-visible:bg-background"
+                          disabled={isSubmitting}
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
 
-              <Button type="submit" disabled={isSubmitting} className="w-full">
-                {isSubmitting ? (
-                  <>
-                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                    Sending...
-                  </>
-                ) : (
-                  "Send Message"
-                )}
-              </Button>
-            </form>
-          </Form>
+                <div className="flex flex-col gap-4 border-t border-dashed border-edge pt-5 sm:flex-row sm:items-center sm:justify-between">
+                  <p className="font-mono text-xs text-muted-foreground">
+                    Let’s make something useful.
+                  </p>
+                  <Button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="h-11 w-full gap-2 rounded-lg px-5 sm:w-auto"
+                  >
+                    {isSubmitting ? (
+                      <>
+                        <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                        Sending...
+                      </>
+                    ) : (
+                      <>
+                        Send Message
+                        <ArrowUpRight className="size-4" aria-hidden="true" />
+                      </>
+                    )}
+                  </Button>
+                </div>
+              </form>
+            </Form>
+          </div>
         </div>
       </div>
     </Panel>

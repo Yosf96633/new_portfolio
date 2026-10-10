@@ -1,22 +1,60 @@
 import { BrandContextMenu } from "@/components/brand-context-menu";
-import { ChanhDaiMark } from "@/components/chanhdai-mark";
+import { fontHandwritten } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
+
+import { MyMarkIsometric } from "./my-mark-isometric";
 
 export function ProfileCover() {
   return (
     <BrandContextMenu>
       <div
         className={cn(
-          "aspect-2/1 border-x border-edge select-none sm:aspect-3/1",
-          "flex items-center justify-center text-black dark:text-white",
+          "relative flex h-[300px] items-center justify-center border-x border-edge select-none sm:h-[420px]",
           "screen-line-before screen-line-after before:-top-px after:-bottom-px",
-          "bg-black/0.75 bg-[radial-gradient(var(--pattern-foreground)_1px,transparent_0)] bg-size-[10px_10px] bg-center [--pattern-foreground:var(--color-zinc-950)]/5 dark:bg-white/0.75 dark:[--pattern-foreground:var(--color-white)]/5"
+          "bg-background"
         )}
       >
-        <ChanhDaiMark
-          id="js-cover-mark"
-          className="h-14 w-28 sm:h-16 sm:w-32"
-        />
+        <MyMarkIsometric />
+        <div
+          id="cover-interaction-hint"
+          className={cn(
+            fontHandwritten.className,
+            "pointer-events-none absolute bottom-20 left-full hidden w-40 flex-col items-start text-xl leading-none tracking-normal text-muted-foreground min-[1100px]:pointer-fine:flex"
+          )}
+        >
+          <svg
+            className="size-8 -scale-y-100 -rotate-6"
+            viewBox="0 0 40 40"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M34 4c1 15-5 26-21 30" />
+            <path d="m22 37-9-3 7.5-8" />
+          </svg>
+          <span className="ml-3 -rotate-6">
+            follows your cursor
+            <span className="block">click for a sound</span>
+          </span>
+        </div>
+        <span
+          className={cn(
+            fontHandwritten.className,
+            "pointer-events-none absolute right-4 bottom-8 hidden -rotate-6 text-xl leading-none text-muted-foreground pointer-coarse:block"
+          )}
+          aria-hidden="true"
+        >
+          tap for a sound
+        </span>
+        <span
+          aria-hidden="true"
+          className="pointer-events-none absolute right-4 bottom-3 font-mono text-xs text-muted-foreground/60"
+        >
+          Fig. 1.
+        </span>
       </div>
     </BrandContextMenu>
   );
