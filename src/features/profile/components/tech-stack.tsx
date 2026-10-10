@@ -21,7 +21,7 @@ export function TechStack() {
           "bg-zinc-950/0.75 dark:bg-white/0.75"
         )}
       >
-        <ul className="flex flex-wrap items-center justify-center gap-3 px-2 select-none sm:gap-4 sm:px-4 md:gap-6 md:px-6">
+        <ul className="flex flex-wrap items-center justify-center gap-2 px-2 select-none sm:gap-3 sm:px-4 md:gap-4 md:px-6">
           {TECH_STACK.map((tech) => {
             return (
               <li key={tech.title} className="flex">
@@ -31,24 +31,24 @@ export function TechStack() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={tech.title}
-                    className="transition-transform hover:scale-110 active:scale-95"
+                    className="flex min-h-11 min-w-11 items-center justify-center transition-transform hover:scale-110 active:scale-95"
                   >
                     {tech.darkIcon ? (
                       <>
                         <Image
                           src={tech.icon}
                           alt={`${tech.title} icon`}
-                          width={62}
-                          height={62}
-                          className="hidden h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 [html.light_&]:block"
+                          width={32}
+                          height={32}
+                          className="hidden size-6 sm:size-7 md:size-8 [html.light_&]:block"
                           unoptimized
                         />
                         <Image
                           src={tech.darkIcon}
                           alt={`${tech.title} icon`}
-                          width={62}
-                          height={62}
-                          className="hidden h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 [html.dark_&]:block"
+                          width={32}
+                          height={32}
+                          className="hidden size-6 sm:size-7 md:size-8 [html.dark_&]:block"
                           unoptimized
                         />
                       </>
@@ -56,9 +56,9 @@ export function TechStack() {
                       <Image
                         src={tech.icon}
                         alt={`${tech.title} icon`}
-                        width={62}
-                        height={62}
-                        className="h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16"
+                        width={32}
+                        height={32}
+                        className="size-6 sm:size-7 md:size-8"
                         unoptimized
                       />
                     )}

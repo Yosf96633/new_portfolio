@@ -66,7 +66,10 @@ export function ProfileHeader() {
           </h1>
 
           <div className="h-12 border-t border-edge py-1 pl-4 sm:h-auto">
-            <FlipSentences sentences={USER.flipSentences} />
+            <FlipSentences
+              className="profile-tagline-shimmer"
+              sentences={USER.flipSentences}
+            />
           </div>
         </div>
       </div>

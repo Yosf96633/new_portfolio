@@ -409,6 +409,39 @@
   }
 }
 
+.profile-tagline-shimmer {
+  display: inline-block;
+  max-width: 100%;
+  color: transparent;
+  background-image: linear-gradient(
+    110deg,
+    var(--muted-foreground) 40%,
+    var(--foreground) 50%,
+    var(--muted-foreground) 60%
+  );
+  background-size: 250% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: profile-tagline-shimmer 1500ms ease-in-out both;
+}
+
+@keyframes profile-tagline-shimmer {
+  from {
+    background-position: 100% 0;
+  }
+  to {
+    background-position: 0% 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .profile-tagline-shimmer {
+    animation: none;
+    background: none;
+    color: var(--muted-foreground);
+  }
+}
+
 @layer components {
   [data-rehype-pretty-code-figure] {
     @apply relative my-6 rounded-lg bg-code text-code-foreground;
