@@ -1,4 +1,4 @@
-import { ArrowUpRightIcon, DownloadIcon } from "lucide-react";
+import { ArrowUpRightIcon, DownloadIcon, FileUser } from "lucide-react";
 import Image from "next/image";
 
 import type { SocialLink } from "@/features/profile/types/social-links";
@@ -24,15 +24,21 @@ export function SocialLinkItem({
       download={download}
     >
       <div className="relative size-12 shrink-0">
-        <Image
-          className="rounded-xl"
-          src={icon}
-          alt={title}
-          width={48}
-          height={48}
-          quality={100}
-          unoptimized
-        />
+        {icon === "resume" ? (
+          <div className="flex size-12 items-center justify-center rounded-xl border border-edge bg-muted/30 text-foreground transition-colors group-hover/link:bg-muted">
+            <FileUser className="size-6" strokeWidth={1.5} aria-hidden="true" />
+          </div>
+        ) : (
+          <Image
+            className="rounded-xl"
+            src={icon}
+            alt={title}
+            width={48}
+            height={48}
+            quality={100}
+            unoptimized
+          />
+        )}
         <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-black/10 ring-inset dark:ring-white/10" />
       </div>
 

@@ -1,5 +1,4 @@
 import { About } from "@/features/profile/components/about";
-import { Brand } from "@/features/profile/components/brand";
 import { DecisionLog } from "@/features/profile/components/decision-log";
 import { Experiences } from "@/features/profile/components/experiences";
 import { Contact } from "@/features/profile/components/form";
@@ -42,8 +41,6 @@ export default function Page() {
       <DecisionLog />
       <Separator />
       <Contact />
-      <Separator />
-      <Brand />
       <Separator />
     </div>
   );
