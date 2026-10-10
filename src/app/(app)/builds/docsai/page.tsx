@@ -136,6 +136,13 @@ export default function DocsAIBuildPage() {
           </p>
           <div className="flex flex-wrap gap-x-5 gap-y-3">
             <Link
+              href="/labs/retrieval"
+              className="inline-flex items-center gap-1.5 underline underline-offset-4"
+            >
+              Inspect retrieval
+              <ArrowUpRight className="size-3.5" aria-hidden="true" />
+            </Link>
+            <Link
               href="/decisions"
               className="inline-flex items-center gap-1.5 underline underline-offset-4"
             >

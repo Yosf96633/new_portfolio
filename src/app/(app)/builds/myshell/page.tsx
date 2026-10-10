@@ -130,13 +130,22 @@ export default function MyShellBuildPage() {
             exit status. myShell’s project overview includes CTest and
             pseudo-terminal integration coverage for these behaviors.
           </p>
-          <Link
-            href="/#projects"
-            className="inline-flex items-center gap-2 underline underline-offset-4"
-          >
-            Back to projects{" "}
-            <ArrowUpRight className="size-3.5" aria-hidden="true" />
-          </Link>
+          <div className="flex flex-wrap gap-x-5 gap-y-3">
+            <Link
+              href="/labs/shell"
+              className="inline-flex items-center gap-2 underline underline-offset-4"
+            >
+              Trace a pipeline
+              <ArrowUpRight className="size-3.5" aria-hidden="true" />
+            </Link>
+            <Link
+              href="/#projects"
+              className="inline-flex items-center gap-2 underline underline-offset-4"
+            >
+              Back to projects{" "}
+              <ArrowUpRight className="size-3.5" aria-hidden="true" />
+            </Link>
+          </div>
         </PanelContent>
       </Panel>
       <SectionSeparator />

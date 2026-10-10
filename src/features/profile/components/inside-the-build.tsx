@@ -1,8 +1,9 @@
-import { ArrowUpRight, FileSearch, Terminal } from "lucide-react";
+import { ArrowUpRight, FileSearch, Terminal, Workflow } from "lucide-react";
 import Link from "next/link";
 
 import { Tag } from "@/components/ui/tag";
 
+import { AUTOHUNT_BUILD } from "../data/autohunt-build";
 import { DOCSAI_BUILD, MYSHELL_BUILD } from "../data/builds";
 import { Panel, PanelHeader, PanelTitle } from "./panel";
 
@@ -26,6 +27,14 @@ const BUILDS = [
       "Hybrid retrieval",
       `${DOCSAI_BUILD.stages.length} stages`,
     ],
+  },
+  {
+    href: "/builds/autohunt",
+    title: "AutoHunt: from CV to reviewed application",
+    description:
+      "Follow job matching, letter refinement, human approval, and application tracking through a stateful workflow.",
+    icon: Workflow,
+    tags: ["LangGraph", "Playwright", `${AUTOHUNT_BUILD.stages.length} stages`],
   },
 ];
 

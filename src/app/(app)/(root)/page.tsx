@@ -1,4 +1,5 @@
 import { About } from "@/features/profile/components/about";
+import { LabLinks } from "@/features/labs/components/lab-links";
 import { DecisionLog } from "@/features/profile/components/decision-log";
 import { Experiences } from "@/features/profile/components/experiences";
 import { Contact } from "@/features/profile/components/form";
@@ -39,6 +40,8 @@ export default function Page() {
       <InsideTheBuild />
       <Separator />
       <DecisionLog />
+      <Separator />
+      <LabLinks />
       <Separator />
       <Contact />
       <Separator />
