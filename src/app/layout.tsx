@@ -37,7 +37,7 @@ const darkModeScript = String.raw`
 export const metadata: Metadata = {
   title: "Yousaf | Full Stack Web Dev",
   icons: {
-    icon: "./favicon.svg",
+    icon: { url: "/favicon.svg?v=2", type: "image/svg+xml" },
   },
 };
 
