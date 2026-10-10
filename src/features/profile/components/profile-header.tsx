@@ -1,4 +1,3 @@
-import { SimpleTooltip } from "@/components/ui/tooltip";
 import { USER } from "@/features/profile/data/user";
 import { cn } from "@/lib/utils";
 import { FlipSentences } from "@/registry/flip-sentences";
@@ -15,34 +14,6 @@ export function ProfileHeader() {
             fetchPriority="high"
           />
         </div>
-        <SimpleTooltip content="I'm from Pakistan">
-          {/* Flag of Pakistan */}
-          <svg
-            className="absolute top-0 -left-px h-8 sm:h-9"
-            viewBox="0 0 30 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            {/* White stripe (left side) */}
-            <rect width="7.5" height="20" fill="#FFFFFF" />
-
-            {/* Green field (right side) */}
-            <rect x="7.5" width="22.5" height="20" fill="#01411C" />
-
-            {/* White crescent - rotated upward */}
-            <g transform="translate(18, 10) rotate(-35)">
-              <circle cx="0" cy="0" r="3.3" fill="#FFFFFF" />
-              <circle cx="1" cy="0" r="2.6" fill="#01411C" />
-            </g>
-
-            {/* White star - positioned inside crescent opening */}
-            <g transform="translate(20.5, 8.5) rotate(-35)">
-              <polygon
-                points="0,-1.6 0.4,-0.5 1.6,-0.5 0.6,0.3 1,1.4 0,0.6 -1,1.4 -0.6,0.3 -1.6,-0.5 -0.4,-0.5"
-                fill="#FFFFFF"
-              />
-            </g>
-          </svg>
-        </SimpleTooltip>
       </div>
 
       <div className="flex flex-1 flex-col">

@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils";
 
 import { PASSAGES, RETRIEVAL_EXAMPLES, retrieve } from "../data/retrieval";
 import type { PassageId, RetrievalMode } from "../data/retrieval";
+import { LabSelector } from "./lab-selector";
 
 const MODES: { id: RetrievalMode; label: string; description: string }[] = [
   {
@@ -47,28 +48,19 @@ export function RetrievalInspector() {
   return (
     <div>
       <div className="space-y-4 border-b border-edge p-4">
-        <label className="block space-y-2">
-          <span className="font-mono text-xs text-muted-foreground">
-            SAMPLE QUESTION
-          </span>
-          <select
-            value={exampleId}
-            onChange={(event) => {
-              const next = RETRIEVAL_EXAMPLES.find(
-                (item) => item.id === event.target.value
-              )!;
-              setExampleId(next.id);
-              setSelected(retrieve(next, mode)[0].id);
-            }}
-            className="min-h-11 w-full min-w-0 rounded-lg border border-edge bg-background px-3 text-sm focus-visible:outline-2 focus-visible:outline-ring"
-          >
-            {RETRIEVAL_EXAMPLES.map((item) => (
-              <option key={item.id} value={item.id}>
-                {item.question}
-              </option>
-            ))}
-          </select>
-        </label>
+        <LabSelector
+          label="Sample question"
+          value={exampleId}
+          options={RETRIEVAL_EXAMPLES.map((item) => ({
+            value: item.id,
+            label: item.question,
+          }))}
+          onValueChange={(value) => {
+            const next = RETRIEVAL_EXAMPLES.find((item) => item.id === value)!;
+            setExampleId(next.id);
+            setSelected(retrieve(next, mode)[0].id);
+          }}
+        />
         <div className="flex flex-wrap gap-2" aria-label="Retrieval method">
           {MODES.map((item) => (
             <Button

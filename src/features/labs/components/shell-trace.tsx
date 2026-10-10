@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 import { describePipeline, SHELL_EXAMPLES, SHELL_PHASES } from "../data/shell";
+import { LabSelector } from "./lab-selector";
 
 export function ShellTrace() {
   const [exampleId, setExampleId] = useState(SHELL_EXAMPLES[0].id);
@@ -21,25 +22,19 @@ export function ShellTrace() {
   return (
     <div>
       <div className="space-y-4 border-b border-edge p-4">
-        <label className="block space-y-2">
-          <span className="font-mono text-xs text-muted-foreground">
-            SAMPLE COMMAND
-          </span>
-          <select
-            value={exampleId}
-            onChange={(event) => {
-              setExampleId(event.target.value);
-              setStep(0);
-            }}
-            className="min-h-11 w-full min-w-0 rounded-lg border border-edge bg-background px-3 font-mono text-xs focus-visible:outline-2 focus-visible:outline-ring"
-          >
-            {SHELL_EXAMPLES.map((item) => (
-              <option key={item.id} value={item.id}>
-                {item.command}
-              </option>
-            ))}
-          </select>
-        </label>
+        <LabSelector
+          label="Sample command"
+          value={exampleId}
+          options={SHELL_EXAMPLES.map((item) => ({
+            value: item.id,
+            label: item.command,
+          }))}
+          onValueChange={(value) => {
+            setExampleId(value);
+            setStep(0);
+          }}
+          className="font-mono text-xs"
+        />
         <p className="text-sm leading-relaxed text-muted-foreground">
           {example.note}
         </p>
