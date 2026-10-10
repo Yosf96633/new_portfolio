@@ -7,12 +7,12 @@ import {
   CollapsibleWithContext,
 } from "@/components/ui/collapsible";
 
-import { MYSHELL_BUILD } from "../data/builds";
+import type { BuildStage } from "../data/builds";
 
-export function BuildStages() {
+export function BuildStages({ stages }: { stages: BuildStage[] }) {
   return (
     <div>
-      {MYSHELL_BUILD.stages.map((stage, index) => (
+      {stages.map((stage, index) => (
         <CollapsibleWithContext
           key={stage.title}
           defaultOpen={index === 0}

@@ -111,7 +111,7 @@ export default function MyShellBuildPage() {
           Expand a stage to inspect its input, output, and the reasoning behind
           it. Execution sketches are pseudocode, not source excerpts.
         </p>
-        <BuildStages />
+        <BuildStages stages={MYSHELL_BUILD.stages} />
       </Panel>
       <SectionSeparator />
       <Panel>
